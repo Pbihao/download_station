@@ -1,0 +1,24 @@
+<% this.title = '查看' %>
+<%-include('header')-%>
+<div class="padding">
+        <form class="" method="post">
+            <div class="ui form">
+                <div class="field">
+                    <label style="font-size: 16px;">发件人:</label>
+                    <input type="text" name="receive_number" value="<%-message.send.user.name -%>" readonly/>
+                </div>
+
+                <div class="field">
+                    <label style="font-size: 16px;">标题:</label>
+                    <input type="text" name="title" value="<%-message.title-%>" readonly/>
+                </div>
+
+                <div class="field">
+                    <label style="font-size: 16px;">内容：</label>
+                    <textarea rows="20" spellcheck="false" id="content" name="content" style="line-height: 1.5;"  readonly><%-message.content-%></textarea>
+                </div>
+            </div>
+        </form>
+</div>
+
+<%-include('footer')-%>

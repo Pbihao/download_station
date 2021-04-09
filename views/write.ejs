@@ -1,0 +1,39 @@
+<% this.title = '打印' %>
+<%-include('header')-%>
+<div class="padding">
+    <% if (user) {%>
+        <form class="" method="post">
+            <div class="ui form">
+                <div class="field">
+                    <label style="font-size: 16px;">收件人:</label>
+                    <input type="text" name="receive_number"/>
+                </div>
+
+                <div class="field">
+                    <label style="font-size: 16px;">标题:</label>
+                    <input type="text" name="title"/>
+                </div>
+
+                <div class="field">
+                    <label style="font-size: 16px;">内容：</label>
+                    <textarea rows="20" spellcheck="false" id="content" name="content" style="line-height: 1.5;"> </textarea>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button id="submit_button" type="submit" class="ui labeled submit icon button">
+                    <i class="icon edit"></i> 发送
+                </button>
+            </div>
+        </form>
+    <% } else { %>
+        <div class="ui placeholder segment">
+            <div class="ui icon header">
+                <i class="print icon"></i>
+                写信前请先登录
+            </div>
+        </div>
+    <%}%>
+</div>
+
+<%-include('footer')-%>
